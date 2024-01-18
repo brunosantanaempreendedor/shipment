@@ -33,6 +33,17 @@ class ShipmentController {
             res.status(500).json({ error: error.message });
         }
     }
+
+    async checkout(req, res) {
+        try {
+            const payload = req.body;
+            const result = await shipmentService.checkout(payload);
+
+            res.json(result);
+        } catch (error) {
+            res.status(500).json({ error: error.message });
+        }
+    }
 }
 
 module.exports = new ShipmentController();
