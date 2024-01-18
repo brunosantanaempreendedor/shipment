@@ -81,6 +81,22 @@ class ShipmentService {
             throw error;
         }
     }
+
+    async generate(payload) {
+        try {
+            const response = await axios.post(config.melhorEnvioApiUrl + 'shipment/generate', payload, {
+                headers: {
+                    'Accept': 'application/json',
+                    'Authorization': `Bearer ${config.melhorEnvioApiToken}`,
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    }
 }
 
 module.exports = new ShipmentService();

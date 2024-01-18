@@ -7,5 +7,6 @@ router.post('/cart', shipmentController.cart);
 router.post('/tracking', shipmentController.tracking);
 router.post('/checkout', shipmentController.checkout);
 router.post('/print', shipmentController.print);
+router.post('/generate', shipmentController.generate);
 
 module.exports = router;
