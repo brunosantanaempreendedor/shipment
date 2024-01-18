@@ -4,7 +4,7 @@ const config = require('../config');
 class ShipmentService {
     async calculateShipping(payload) {
         try {
-            const response = await axios.post(config.melhorEnvioApiUrl, payload, {
+            const response = await axios.post(config.melhorEnvioApiUrl + 'calculate', payload, {
                 headers: {
                     'Accept': 'application/json',
                     'Authorization': `Bearer ${config.melhorEnvioApiToken}`,
