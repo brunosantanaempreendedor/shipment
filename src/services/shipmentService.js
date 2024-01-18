@@ -9,7 +9,6 @@ class ShipmentService {
                     'Accept': 'application/json',
                     'Authorization': `Bearer ${config.melhorEnvioApiToken}`,
                     'Content-Type': 'application/json',
-                    'User-Agent': 'Sua Aplicação (email para contato técnico)',
                 },
             });
 
